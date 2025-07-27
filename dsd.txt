@@ -1,0 +1,8 @@
+Binary search & linear search (menu driven) 
+Quick sort 
+Merge sort 
+Strassen's multiplication matrix 
+Prim's algorithm 
+Krauskal algorithm  
+TSP algorithm 
+Knapsack algorithm ( integer and fractional ) 
