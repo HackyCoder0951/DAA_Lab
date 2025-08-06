@@ -5,4 +5,4 @@ Strassen's multiplication matrix
 Prim's algorithm 
 Krauskal algorithm  
 TSP algorithm 
-Knapsack algorithm ( integer and fractional ) 
+Knapsack algorithm ( integer and fractional ) with greedy and dp

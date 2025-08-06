@@ -25,9 +25,3 @@ sum_of_subsets(weights, target_sum)
 
 # Enter the set of weights (space separated): 10 7 5 18 12 20 15
 # Enter the target sum: 35
-
-# Subsets whose sum is 35 :
-# Subset found: [10, 7, 18]
-# Subset found: [10, 5, 20]
-# Subset found: [7, 5, 12, 11]
-# ...
