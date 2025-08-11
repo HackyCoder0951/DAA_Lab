@@ -36,7 +36,7 @@ if __name__ == "__main__":
 			if solution:
 				print(f"A solution exists for {n} queens:")
 				for row in range(n):
-					line = ['Q' if solution[row] == col else '.' for col in range(n)]
+					line = ['Q' if solution[row] == col else '_' for col in range(n)]
 					print(' '.join(line))
 			else:
 				print(f"No solution exists for {n} queens.")
