@@ -1,0 +1,40 @@
+Procedure Kruaskal(V,E)
+    Begin
+        T <-- phi
+    Sort edges(e belongs to E) in ascending order
+        n <-- |v|
+    Repeat
+        Begin
+            select ( U,V) belongs to E of lowest cost
+            if T Union (U,V) doesn't make cycle
+                T <-- T Union ( U,V)
+            else 
+                reject (U,V)
+            endif
+            until |T| != (n-1)
+            if solution(s) found
+                return T
+            endif;
+        end;
+
+
+Procedure Prims(V,E)
+    Begin
+        T <-- phi
+    select arbitrary v belongs to V
+        T <-- v
+        T <-- V - v
+    while (|V| != 0) do
+        select edge( U,v) belongs to E with lowest cost such that
+            u belongs to T and v belongs to V
+        if T Union (u,v) doesn't make cycle
+            T <-- T Union ( u,v)
+        else 
+            reject (u,v)
+        endif
+            v <-- V - v 
+        end
+        if solution(s) found
+            return T
+        endif;
+    end;

@@ -27,6 +27,7 @@ def sum_of_subsets_iterative(weights, target_sum):
 # === Main Program ===
 weights = list(map(int, input("Enter the set of weights (space separated): ").split()))
 target_sum = int(input("Enter the target sum: "))
+
 def all_subsets(weights):
     subsets = list(chain.from_iterable(combinations(weights, r) for r in range(len(weights)+1)))
     print("All subsets:")
