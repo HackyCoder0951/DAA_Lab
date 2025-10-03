@@ -58,3 +58,27 @@ def calculate_bound(current_weight, current_value, item_index, items, capacity):
             bound += items[i].ratio * remain
             break
     return bound
+
+# ---------------------- Input Section ----------------------
+print("=== 0/1 Knapsack using Branch and Bound ===")
+n = int(input("Enter number of items: "))
+
+weights = []
+values = []
+items = []
+
+print("Enter weight and value for each item:")
+for i in range(n):
+    w = int(input(f"Weight of item {i+1}: "))
+    v = int(input(f"Value of item {i+1}: "))
+    weights.append(w)
+    values.append(v)
+    items.append(Item(w, v))
+
+capacity = int(input("Enter knapsack capacity: "))
+
+# ---------------------- Output Section ----------------------
+# 0/1 Knapsack Branch and Bound
+max_value_bnb = knapsack_branch_and_bound(items, capacity)
+print("\n0/1 Knapsack (Branch and Bound):")
+print("Maximum value:", max_value_bnb)

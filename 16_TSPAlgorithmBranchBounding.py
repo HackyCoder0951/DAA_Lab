@@ -84,4 +84,33 @@ def tsp_branch_and_bound(graph):
                 # For now, let's just use the current path cost as a base for the lower bound.
                 new_lower_bound = current_path_cost + remaining_lower_bound
 
-                heapq.heappush(pq, (new_lower_bound, next_city, new_path, new_visited_mask))
+                heapq.heappush(pq, (new_lower_bound, next_city, new_path, new_visited_mask))    
+    return min_cost, best_path
+
+def take_input_and_run_tsp_bnb():
+    n = int(input("Enter the number of cities (vertices): "))
+    print("Enter the cost adjacency matrix (use 0 for no direct path, or a very large number like 999 for no direct path):")
+    graph = []
+    for i in range(n):
+        row = list(map(int, input(f"Row {i + 1}: ").split()))
+        if len(row) != n:
+            print("Error: Row length must be equal to number of cities.")
+            return
+        # Replace 0 with float('inf') for non-existent paths if needed,
+        # but for TSP, 0 usually means no direct path and should be handled.
+        # Here, we assume 0 means no direct path and will be skipped in calculations.
+        # If the user enters a large number for no path, it will be used.
+        graph.append(row)
+
+    min_cost, best_path = tsp_branch_and_bound(graph)
+    
+    if min_cost == float('inf'):
+        print("\nNo TSP tour found.")
+    else:
+        print(f"\nMinimum cost to complete TSP tour (Branch and Bound): {min_cost}")
+        # Adjust path to show city numbers starting from 1 if desired
+        print("Best path:", [city + 1 for city in best_path])
+
+# Run
+if __name__ == "__main__":
+    take_input_and_run_tsp_bnb()
