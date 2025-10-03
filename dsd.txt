@@ -6,12 +6,13 @@ Merge sort
 Strassen's multiplication matrix 
 Prim's algorithm 
 Krauskal algorithm  
-Knapsack algorithm ( integer and fractional ) with greedy 
-TSP algorithm with greedy
-Sum of subset 
-N Queen Problem
-Knapsack algorithm ( integer and fractional ) with dp and 
-Knapsack algorithm ( integer and fractional ) with backtracking and 
-Knapsack algorithm ( integer and fractional ) with (branch and bounding)
+Integer Knapsack algorithm with DP
+Fractional Knapsack algorithm with Greedy 
+TSP algorithm with Greedy
+TSP algorithm with DP
+Sum of subset using backtracking
+N Queen Problem using backtracking
+Integer Knapsack algorithm with backtracking 
+Knapsack algorithm with (branch and bounding)
 TSP algorithm with branch and bounding 
-DFS and BFS
+DFS and BFS (Graph Traversal algorithms)
