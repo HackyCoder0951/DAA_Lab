@@ -1,18 +1,18 @@
 All the algorithms for DAA Lab
 
-Binary search & linear search (menu driven) 
-Quick sort 
-Merge sort 
-Strassen's multiplication matrix 
-Prim's algorithm 
-Krauskal algorithm  
-Integer Knapsack algorithm with DP
-Fractional Knapsack algorithm with Greedy 
-TSP algorithm with Greedy
-TSP algorithm with DP
-Sum of subset using backtracking
-N Queen Problem using backtracking
-Integer Knapsack algorithm with backtracking 
-Knapsack algorithm with (branch and bounding)
-TSP algorithm with branch and bounding 
-DFS and BFS (Graph Traversal algorithms)
+1 - Binary search & linear search (menu driven) 
+2 - Quick sort 
+3 - Merge sort 
+4 - Strassen's multiplication matrix 
+5 - Prim's algorithm 
+6 - Krauskal algorithm  
+7 - Fractional Knapsack algorithm with Greedy 
+8 - Integer Knapsack algorithm with DP
+9 - TSP algorithm with Greedy
+10 - TSP algorithm with DP
+11 - Sum of subset using backtracking
+12 - N Queen Problem using backtracking
+13 - Integer Knapsack algorithm with backtracking 
+14 - Knapsack algorithm with (branch and bounding)
+15 - TSP algorithm with branch and bounding 
+16 - DFS and BFS (Graph Traversal algorithms)
