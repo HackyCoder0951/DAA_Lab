@@ -47,7 +47,7 @@ def tsp_branch_and_bound(graph):
 
         # Explore neighbors
         for next_city in range(num_cities):
-            if not (visited_mask &(1 << next_city)): # If next_city has not been visited
+            if not (visited_mask & (1 << next_city)): # If next_city has not been visited
                 new_visited_mask = visited_mask | (1 << next_city)
                 new_path = path + [next_city]
                 

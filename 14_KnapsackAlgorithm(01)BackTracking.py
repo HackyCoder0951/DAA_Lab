@@ -65,3 +65,26 @@ print("Items taken (indices):", best_items_bt)
 # Weight of item 4: 9
 # Value of item 4: 18
 # Enter knapsack capacity: 15
+
+
+# if two indices have same value, it will take the one which comes first
+# 0/1 Knapsack (Backtracking):
+# Maximum value: 40
+# Items taken (indices): [0, 1, 3]
+# then it'll print also the all combinations
+# [0, 1, 2]
+# [0, 1, 3]
+# [0, 2, 3]
+# [1, 2, 3]
+# [0, 1]
+# [0, 2]
+# [0, 3]
+# [1, 2]
+# [1, 3]
+# [2, 3]
+# [0]
+# [1]
+# [2]
+# [3]
+# []
+# 40
