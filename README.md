@@ -41,8 +41,6 @@ DAA_Lab/
 ├── 14_Knapsack_BranchAndBound.py       # 0/1 Knapsack using Branch & Bound
 ├── 15_TSP_BranchAndBound.py            # TSP using Branch & Bound
 │
-├── examples/                           # Example test cases (optional)
-├── tests/                              # Unit tests (future scope)
 └── README.md
 ```
 
