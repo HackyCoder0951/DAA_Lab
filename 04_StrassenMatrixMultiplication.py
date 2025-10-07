@@ -1,3 +1,8 @@
+import time
+
+global start_time,end_time
+start_time = time.perf_counter()
+
 # Matrix addition
 def add_matrix(A, B):
     n = len(A)
@@ -86,6 +91,7 @@ def read_matrix(name):
 
 # Main program with full exception handling
 def main():
+
     print(" Strassen's Matrix Multiplication ")
 
     A = read_matrix("A")
@@ -112,15 +118,18 @@ def main():
 
         # Crop to original size
         C = crop_matrix(C_pad, orig_size)
-
+        end_time = time.perf_counter()
         # Output result
         print("\n Resultant Matrix C = A x B:")
         for row in C:
             print(" ".join(map(str, row)))
-
+        print(f"Start Time: {start_time:.6f} seconds")
+        print(f"End Time: {end_time:.6f} seconds")
+        print(f"Computation Time: {end_time - start_time:.6f} seconds")
     except Exception as e:
         print("Error:", e)
 
 # Run the program
 if __name__ == "__main__":
     main()
+    start_time = time.perf_counter()
