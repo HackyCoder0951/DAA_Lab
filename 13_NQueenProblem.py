@@ -28,6 +28,7 @@ def noConflicts(board, current):
 	return True
 if __name__ == "__main__":
 	try:
+		start_time = time.perf_counter()
 		n = int(input("Enter the number of queens: "))
 		if n <= 0:
 			print("Number of queens must be positive.")
@@ -38,6 +39,11 @@ if __name__ == "__main__":
 				for row in range(n):
 					line = ['Q' if solution[row] == col else '_' for col in range(n)]
 					print(' '.join(line))
+				end_time = time.perf_counter()
+				print(f"Start Time: {start_time:.10f} seconds")
+				print(f"End Time: {end_time:.10f} seconds")
+				print(f"Computation Time: {end_time - start_time:.10f} seconds")
+				print(f"Solution (queen's column positions): {solution}")
 			else:
 				print(f"No solution exists for {n} queens.")
 	except ValueError:
@@ -55,26 +61,26 @@ if __name__ == "__main__":
 		# Space Complexity:
 		# The space complexity is O(N), as we use a list of size N to store the column positions of the queens.
 		# Start measuring time and memory
-		start_time = time.perf_counter()
-		tracemalloc.start()
-		process = psutil.Process(os.getpid())
-		mem_before = process.memory_info().rss
+		# start_time = time.perf_counter()
+		# # tracemalloc.start()
+		# # process = psutil.Process(os.getpid())
+		# # mem_before = process.memory_info().rss
 
-		# Run the computation again for measurement
-		_ = calcQueens(n)
+		# # Run the computation again for measurement
+		# _ = calcQueens(n)
 
-		# Stop measuring time and memory
-		end_time = time.perf_counter()
-		current, peak = tracemalloc.get_traced_memory()
-		mem_after = process.memory_info().rss
-		tracemalloc.stop()
-		print(f"CPU Execution Time: {end_time - start_time:.6f} seconds")
-		print(f"Peak Memory Used by Variables: {peak * 8:.2f} b")
-		print(f"Process Memory Before: {mem_before * 8:.2f} b")
-		print(f"Process Memory After: {mem_after * 8:.2f} b")
-		# Print the range of memory addresses used by the 'solution' variable
-		addresses = [id(x) for x in solution]
-		if addresses:
-			print(f"Memory address range for 'solution': {hex(min(addresses))} - {hex(max(addresses))}")
-		else:
-			print("No memory addresses to display for 'solution'.")
+		# # Stop measuring time and memory
+		# end_time = time.perf_counter()
+		# current, peak = tracemalloc.get_traced_memory()
+		# mem_after = process.memory_info().rss
+		# tracemalloc.stop()
+		# print(f"CPU Execution Time: {end_time - start_time:.6f} seconds")
+		# print(f"Peak Memory Used by Variables: {peak * 8:.2f} b")
+		# print(f"Process Memory Before: {mem_before * 8:.2f} b")
+		# print(f"Process Memory After: {mem_after * 8:.2f} b")
+		# # Print the range of memory addresses used by the 'solution' variable
+		# addresses = [id(x) for x in solution]
+		# if addresses:
+		# 	print(f"Memory address range for 'solution': {hex(min(addresses))} - {hex(max(addresses))}")
+		# else:
+		# 	print("No memory addresses to display for 'solution'.")
