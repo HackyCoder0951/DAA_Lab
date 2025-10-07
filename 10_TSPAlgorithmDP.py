@@ -1,4 +1,5 @@
 import sys
+from typing import Set
 
 def tsp_dp(graph):
     n = len(graph)
@@ -55,3 +56,23 @@ def take_input_and_run_tsp_dp():
 
 # Run
 take_input_and_run_tsp_dp()
+
+
+# Step 1: Start
+# Step 2: Input number of cities n and cost adjacency matrix graph[n][n]
+# Step 3: Initialize visited[0..n-1] = False; 
+#     # set visited[0] = True (start at city 0)
+#     # Set min_cost = + ∞
+# Step 4: Define recursive tsp(current, count, cost)
+    # If count == n and graph[current][0] > 0:
+        # min_cost = min(min_cost, cost + graph[current][0])
+        # return
+    # For each city i from 0 to n-1:
+        # If not visited[i] and graph[current][i] > 0:
+            # visited[i] = True
+            # tsp(i, count + 1, cost + graph[current][i])
+            # visited[i] = False // backtrack
+# Step 5: Call tsp(0, 1, 0)
+# Step 6: If min_cost == + ∞ → output “No Hamiltonian tour exists”, 
+        # else output min_cost
+# Step 7: End
