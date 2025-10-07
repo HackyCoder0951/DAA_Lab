@@ -14,6 +14,10 @@ def prims_algorithm(graph, n):
             if not selected[v] and key[v] < min_key:
                 min_key = key[v]
                 u = v
+                
+        # disconnected graph check        
+        if u == -1: 
+            break
 
         selected[u] = True
 
